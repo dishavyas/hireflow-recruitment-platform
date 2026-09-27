@@ -15,4 +15,14 @@ app.post('/api/candidates',auth,(req:any,res)=>{if(!req.body.name||!req.body.ema
 app.put('/api/candidates/:id',auth,(req:any,res)=>{const d=db(),i=d.candidates.findIndex(x=>x.id===req.params.id&&x.ownerId===req.user.id);if(i<0)return res.status(404).json({message:'Candidate not found'});d.candidates[i]={...d.candidates[i],...req.body,id:d.candidates[i].id,ownerId:req.user.id};save(d);res.json(d.candidates[i])});
 app.patch('/api/candidates/:id/stage',auth,(req:any,res)=>{const allowed=['Applied','Screening','Interview','Offered','Hired','Rejected'];if(!allowed.includes(req.body.stage))return res.status(400).json({message:'Invalid stage'});const d=db(),c=d.candidates.find(x=>x.id===req.params.id&&x.ownerId===req.user.id);if(!c)return res.status(404).json({message:'Candidate not found'});c.stage=req.body.stage;save(d);res.json(c)});
 app.delete('/api/candidates/:id',auth,(req:any,res)=>{const d=db(),before=d.candidates.length;d.candidates=d.candidates.filter(x=>!(x.id===req.params.id&&x.ownerId===req.user.id));if(d.candidates.length===before)return res.status(404).json({message:'Candidate not found'});save(d);res.status(204).end()});
-app.use((_,res)=>res.status(404).json({message:'Route not found'}));app.listen(PORT,()=>console.log(`HireFlow API running on http://localhost:${PORT}`));
+app.use((_, res) =>
+  res.status(404).json({ message: 'Route not found' })
+);
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () =>
+    console.log(`HireFlow API running on http://localhost:${PORT}`)
+  );
+}
+
+export default app;

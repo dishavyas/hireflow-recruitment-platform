@@ -6,6 +6,13 @@
       "email": "disha@123",
       "password": "$2b$10$MgxLLFtDVprhmRrN7jGAnulIdvdNebUJoSR.Nz0HEzCEFi3NX8ZxK",
       "createdAt": "2026-09-27T08:37:26.951Z"
+    },
+    {
+      "id": "1f85fa37-bb5a-4b54-8b58-e5a8d9d7d159",
+      "name": "Disha Vyas",
+      "email": "dishavyas1008@gmail",
+      "password": "$2b$10$Zb9PgP1CxDJ4I7rlFWJ05uxmTq0rARzC.ZMyVluiiERzXPnP/GUeG",
+      "createdAt": "2026-09-27T08:45:02.174Z"
     }
   ],
   "jobs": [],
