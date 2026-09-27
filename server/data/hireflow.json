@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "b4ea2fe1-84ca-4a9f-9e90-a3946059a8b3",
+      "name": "disha vyas",
+      "email": "disha@123",
+      "password": "$2b$10$MgxLLFtDVprhmRrN7jGAnulIdvdNebUJoSR.Nz0HEzCEFi3NX8ZxK",
+      "createdAt": "2026-09-27T08:37:26.951Z"
+    }
+  ],
+  "jobs": [],
+  "candidates": []
+}

@@ -1,0 +1,1 @@
+{"scripts":{"dev":"tsx watch src/index.ts","start":"tsx src/index.ts"},"dependencies":{"express":"latest","cors":"latest","dotenv":"latest","bcryptjs":"latest","jsonwebtoken":"latest","tsx":"latest","typescript":"latest","@types/express":"latest","@types/jsonwebtoken":"latest","@types/cors":"latest","@types/node":"latest"}}
